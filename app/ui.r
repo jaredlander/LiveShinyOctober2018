@@ -25,9 +25,27 @@ plotsPanel <- tabPanel(
     )
 )
 
+mapPanel <- tabPanel(
+    title='Pizza',
+    fluidRow(
+        column(
+            width=6,
+            DT::dataTableOutput(
+                outputId='PizzaTable'
+            )
+        ),
+        column(
+            width=6,
+            leaflet::leafletOutput(
+                outputId='PizzaMap'
+            )
+        )
+    )
+)
+
 navbarPage(
     title='My First Shiny App',
-    selected='Plots',
+    selected='Pizza',
     tabPanel(
         title='First Page',
         'Hello, there'
@@ -36,5 +54,6 @@ navbarPage(
         title='Second Page',
         'You must be going'
     ),
-    plotsPanel
+    plotsPanel,
+    mapPanel
 )
