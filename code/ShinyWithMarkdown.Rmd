@@ -73,3 +73,13 @@ passwordInput(
 renderText(input$PasswordSample)
 ```
 
+# Show Data
+
+```{r render-tables}
+renderTable(mtcars, rownames=FALSE)
+
+renderDataTable(mtcars)
+
+DT::renderDataTable(mtcars)
+```
+
