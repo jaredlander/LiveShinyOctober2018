@@ -19,11 +19,13 @@ shinyServer(function(input, output, session){
     
     output$PizzaMap <- renderLeaflet({
         leaflet() %>% 
-            addTiles() %>% 
+            addTiles() %>%
+            # addProviderTiles('Staman.Watercolor') %>% 
             addMarkers(
                 lng = ~ longitude, lat = ~ latitude,
                 popup = ~ Name,
-                data=pizza
+                data=pizza %>% 
+                    dplyr::slice(as.integer(input$PizzaTable_rows_selected))
             )
     })
 })
