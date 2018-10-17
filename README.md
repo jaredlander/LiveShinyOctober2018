@@ -20,6 +20,7 @@ the necessary packages.
 <pre class='sourceCode r'><code class='sourceCode r'>
 packages <- c(
     'coefplot', 
+    'DT',
     'dygraphs', 
     'flexdashboard', 
     'ggthemes', 
