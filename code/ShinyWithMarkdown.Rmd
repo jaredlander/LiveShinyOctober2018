@@ -23,3 +23,29 @@ selectInput(
 renderText(input$SelectSample)
 ```
 
+# Other Inputs
+
+```{r other-inputs}
+sliderInput(
+    inputId='SliderSample',
+    label='This is a slider',
+    min=0, max=10, value=5
+)
+
+checkboxInput(
+    inputId='CheckSample',
+    label='Check this out'
+)
+
+radioButtons(
+    inputId='RadioSample',
+    label='Choose One',
+    choices=list('A', 'B', 'C')
+)
+
+dateInput(
+    inputId='DateChoice',
+    label='Select a date'
+)
+```
+
