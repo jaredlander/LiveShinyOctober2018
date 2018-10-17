@@ -24,7 +24,7 @@ packages <- c(
     'flexdashboard', 
     'ggthemes', 
     'here', 
-    'jsonlie', 
+    'jsonlite', 
     'knitr', 
     'leaflet', 
     'rmarkdown', 
