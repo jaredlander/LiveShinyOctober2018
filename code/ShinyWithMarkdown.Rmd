@@ -49,3 +49,27 @@ dateInput(
 )
 ```
 
+# Text Input
+
+```{r text-inputs}
+textInput(
+    inputId='TextSample',
+    label='Write Something',
+    placeholder='Enter words here'
+)
+
+textAreaInput(
+    inputId='TextAreaSample',
+    label='Write a long story'
+)
+
+passwordInput(
+    inputId='PasswordSample',
+    label='Enter the secret'
+)
+```
+
+```{r show-password}
+renderText(input$PasswordSample)
+```
+
