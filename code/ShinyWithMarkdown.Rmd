@@ -1,0 +1,25 @@
+---
+title: Shiny in Markdown
+author: Jared P. Lander
+output: html_document
+runtime: shiny
+---
+
+```{r load-packages}
+library(shiny)
+```
+
+# Select Input
+
+```{r select-input}
+selectInput(
+    inputId='SelectSample',
+    label='Please select a state',
+    choices=list('New York', 'Pennsylvania', 'California', 'Texas', 'Tennessee')
+)
+```
+
+```{r print-state}
+renderText(input$SelectSample)
+```
+
